@@ -26,6 +26,6 @@ end
 
 appraise 'activerecord-8.2' do
   git 'https://github.com/rails/rails.git' do
-    gem 'activerecord', '>= 8.2.0.alpha', '< 8.3.0'
+    gem 'activerecord', '~> 8.2.0.alpha'
   end
 end

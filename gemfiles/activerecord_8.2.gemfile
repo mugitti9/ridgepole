@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 git "https://github.com/rails/rails.git" do
-  gem "activerecord", "~> 8.2.0.alpha"
+  gem "activerecord", "~> 8.2.0.alpha", "< 8.3.0"
 end
 
 gem "mutex_m"
