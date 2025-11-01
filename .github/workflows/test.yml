@@ -101,6 +101,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           flag-name: run-${{ matrix.ruby }}-${{ matrix.env }}-${{ matrix.gemfile }}
           parallel: true
+      - name: Show ActiveRecord version constraint
+        run: |
+          echo $(awk -F '[ ",]+' '/activerecord/{print $4}' ${{ matrix.gemfile }})
       - name: Build and install gem
         run: |
           gem install securerandom -v '~> 0.3.2'
